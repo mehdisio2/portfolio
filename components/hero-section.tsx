@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Shield, Lock, Globe, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
     return (
@@ -18,8 +19,8 @@ export function HeroSection() {
                             Digital Infrastructure for Private Practice
                         </span>
 
-                        <h1 className="mb-6 text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight">
-                            I build secure digital clinics for high-performing doctors.
+                        <h1 className="mb-6 text-5xl lg:text-6xl font-serif font-bold tracking-tight text-foreground leading-tight">
+                            High-Performance Digital Infrastructure for Private Practice.
                         </h1>
 
                         <p className="mb-8 text-lg text-muted-foreground max-w-xl leading-relaxed">
@@ -27,8 +28,8 @@ export function HeroSection() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12 w-full">
-                            <button className="h-12 px-8 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors shadow-sm">
-                                Schedule Strategy Call
+                            <button className="h-12 px-8 rounded-md bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors shadow-sm">
+                                Book Consultation
                             </button>
 
                             <Link
@@ -40,17 +41,17 @@ export function HeroSection() {
                             </Link>
                         </div>
 
-                        <div className="flex items-center gap-6 text-muted-foreground text-sm font-medium border-t border-border pt-8 w-full">
+                        <div className="flex items-center gap-6 text-foreground/60 text-sm font-medium border-t border-border pt-8 w-full">
                             <div className="flex items-center gap-2">
-                                <Shield className="w-4 h-4 text-muted-foreground" />
+                                <Shield className="w-4 h-4 text-foreground/50" strokeWidth={1.5} />
                                 <span>HIPAA Ready</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Lock className="w-4 h-4 text-muted-foreground" />
+                                <Lock className="w-4 h-4 text-foreground/50" strokeWidth={1.5} />
                                 <span>Bank-Grade Security</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Globe className="w-4 h-4 text-muted-foreground" />
+                                <Globe className="w-4 h-4 text-foreground/50" strokeWidth={1.5} />
                                 <span>Native Arabic Support</span>
                             </div>
                         </div>
@@ -58,31 +59,50 @@ export function HeroSection() {
 
                     {/* Right Column - Visual Anchor (40% -> span 2) */}
                     <div className="lg:col-span-2 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
-                        {/* Layer 1: Aura Blob */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/20 blur-3xl rounded-full -z-10 animate-pulse-slow"></div>
+                        <div className="relative w-full h-[500px] flex items-center justify-center">
 
-                        {/* Layer 2: The Person */}
-                        <div className="relative z-0">
-                            {/* Using Next.js Image for optimization, assuming the file is in public/ */}
-                            <Image
-                                src="/consultant_portrait.png"
-                                alt="Consultant Portrait"
-                                width={400}
-                                height={500}
-                                className="object-cover rounded-2xl shadow-sm relative z-10 mask-gradient-b"
-                                priority
-                            />
-                        </div>
+                            {/* LAYER 1: The Ambient Glow (Aura) - Subtle grey for monochrome */}
+                            <div className="absolute w-[350px] h-[350px] bg-muted/50 rounded-full blur-3xl -z-10" />
 
-                        {/* Layer 3: Glass Card */}
-                        <div className="absolute -bottom-6 -left-6 z-20 bg-card/90 backdrop-blur-md border border-border shadow-lg rounded-lg p-4 flex items-center gap-4 max-w-[260px] animate-float">
-                            <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                                <CheckCircle2 className="w-6 h-6 text-primary" />
+                            {/* LAYER 2: The Person (Transparent PNG) */}
+                            <div className="relative z-10 w-[600px] -mt-20">
+                                <Image
+                                    src="/consultant-profile.png"
+                                    alt="Clinical Consultant"
+                                    width={1200}
+                                    height={1200}
+                                    priority
+                                    className="object-contain drop-shadow-xl"
+                                />
                             </div>
-                            <div>
-                                <p className="text-sm font-semibold text-foreground">Appointment Confirmed</p>
-                                <p className="text-xs text-muted-foreground">Video consultation link sent.</p>
-                            </div>
+
+                            {/* LAYER 3: The Frosted Glass Card (Coded Overlay) */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.5, duration: 0.8 }}
+                                className="absolute bottom-10 -left-4 z-20"
+                            >
+                                {/* THE GLASS CARD STYLING - Adapted to Theme */}
+                                <div className="flex items-center gap-4 p-4 pr-8 rounded-2xl bg-card/70 backdrop-blur-md border border-border/50 shadow-xl ring-1 ring-border/50">
+
+                                    {/* Icon Box */}
+                                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                                        <CheckCircle2 className="w-6 h-6 text-primary" />
+                                    </div>
+
+                                    {/* Text Content */}
+                                    <div className="flex flex-col">
+                                        <span className="text-sm font-bold text-foreground">
+                                            Appointment Confirmed
+                                        </span>
+                                        <span className="text-xs text-muted-foreground font-medium mt-0.5">
+                                            Video link sent to patient
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
 

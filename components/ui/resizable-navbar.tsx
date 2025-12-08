@@ -237,9 +237,6 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <div className="h-6 w-6 rounded-md bg-foreground flex items-center justify-center">
-        <span className="text-background font-bold text-xs">E</span>
-      </div>
       <div className="flex flex-col">
         <span className="font-medium text-foreground leading-none">El Mahdi Badilou</span>
         <span className="text-xs text-muted-foreground leading-none mt-0.5">Clinical Systems</span>
@@ -270,11 +267,11 @@ export const NavbarButton = ({
 
   const variantStyles = {
     primary:
-      "bg-primary text-primary-foreground shadow-md hover:bg-primary/90",
+      "bg-foreground text-background shadow-md hover:bg-foreground/90",
     secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
     dark: "bg-foreground text-background shadow-md hover:bg-foreground/90",
     gradient:
-      "bg-gradient-to-b from-primary to-accent text-primary-foreground shadow-md",
+      "bg-gradient-to-b from-foreground to-foreground/80 text-background shadow-md",
   };
 
   return (

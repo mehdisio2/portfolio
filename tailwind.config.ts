@@ -21,6 +21,8 @@ const config = {
             fontFamily: {
                 // Ensure Inter is set up in layout.tsx
                 sans: ["var(--font-sans)", ...fontFamily.sans],
+                // Playfair Display for editorial headings
+                serif: ["var(--font-serif)", ...fontFamily.serif],
             },
             colors: {
                 border: "hsl(var(--border))",
