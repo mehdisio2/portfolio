@@ -57,68 +57,137 @@ export function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Right Column - Visual Anchor (40% -> span 2) */}
-                    <div className="lg:col-span-2 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
-                        <div className="relative w-full h-[500px] flex items-center justify-center">
+                    {/* Right Column - Architect's Overlay Visualization */}
+                    <div className="lg:col-span-2 relative mt-8 lg:mt-0 overflow-visible">
 
-                            {/* LAYER 1: The Ambient Glow (Aura) - Subtle grey for monochrome */}
-                            <div className="absolute w-[350px] h-[350px] bg-muted/50 rounded-full blur-3xl -z-10" />
+                        {/* Image Container - Relative for absolute card positioning */}
+                        <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[550px] flex items-center justify-center">
 
-                            {/* LAYER 2: The Person (Transparent PNG) */}
-                            <div className="relative z-10 w-[600px] -mt-20">
+                            {/* LAYER 0: The Ambient Glow (Aura) */}
+                            <div className="absolute w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[350px] lg:h-[350px] bg-muted/40 rounded-full blur-3xl" />
+
+                            {/* LAYER 1: The Person (Base Layer) */}
+                            <div className="relative z-0 w-[240px] sm:w-[320px] lg:w-[500px]">
                                 <Image
                                     src="/consultant-profile.png"
-                                    alt="Clinical Consultant"
+                                    alt="Clinical Systems Architect"
                                     width={1200}
                                     height={1200}
                                     priority
-                                    className="object-contain drop-shadow-xl"
+                                    className="object-contain drop-shadow-lg"
                                 />
                             </div>
 
-                            {/* LAYER 3: The Frosted Glass Card (Coded Overlay) */}
+                            {/* LAYER 2: Floating Glass Cards (All Breakpoints - Responsive Positioning) */}
+
+                            {/* Card 1: Patient Growth (Top Right) */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5, duration: 0.8 }}
-                                className="absolute bottom-10 -left-4 z-20"
+                                animate={{ opacity: 1, y: [0, -8, 0] }}
+                                transition={{
+                                    opacity: { delay: 0.3, duration: 0.6 },
+                                    y: { delay: 0.9, duration: 4, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                                className="absolute z-20 transform transition-all duration-500
+                                    top-4 -right-2 scale-[0.7] origin-top-right
+                                    md:top-[33%] md:-right-8 md:scale-100"
                             >
-                                {/* THE GLASS CARD STYLING - Adapted to Theme */}
-                                <div className="flex items-center gap-4 p-4 pr-8 rounded-2xl bg-card/70 backdrop-blur-md border border-border/50 shadow-xl ring-1 ring-border/50">
-
-                                    {/* Icon Box */}
-                                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-                                        <CheckCircle2 className="w-6 h-6 text-primary" />
+                                <div className="p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl">
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <div className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-foreground/70">
+                                                <polyline points="22,7 13.5,15.5 8.5,10.5 2,17" />
+                                                <polyline points="16,7 22,7 22,13" />
+                                            </svg>
+                                        </div>
+                                        <span className="text-xs font-medium text-foreground/60 uppercase tracking-wide">Patient Growth</span>
                                     </div>
-
-                                    {/* Text Content */}
-                                    <div className="flex flex-col">
-                                        <span className="text-sm font-bold text-foreground">
-                                            Appointment Confirmed
-                                        </span>
-                                        <span className="text-xs text-muted-foreground font-medium mt-0.5">
-                                            Video link sent to patient
-                                        </span>
-                                    </div>
-
+                                    {/* Mini Line Graph SVG */}
+                                    <svg width="120" height="40" viewBox="0 0 120 40" className="mb-2">
+                                        <polyline
+                                            points="0,35 20,30 40,25 60,28 80,15 100,12 120,5"
+                                            fill="none"
+                                            stroke="hsl(var(--foreground))"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            opacity="0.6"
+                                        />
+                                        <circle cx="120" cy="5" r="3" fill="hsl(var(--foreground))" opacity="0.8" />
+                                    </svg>
+                                    <span className="text-sm font-semibold text-foreground">Patient Acquisition: <span className="text-foreground/80">+24%</span></span>
                                 </div>
                             </motion.div>
+
+                            {/* Card 2: Appointment Card (Left Side) */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: [0, -6, 0] }}
+                                transition={{
+                                    opacity: { delay: 0.5, duration: 0.6 },
+                                    y: { delay: 1.2, duration: 5, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                                className="absolute z-20 transform transition-all duration-500
+                                    top-1/2 -translate-y-1/2 -left-2 scale-[0.7] origin-left
+                                    md:top-1/2 md:-translate-y-1/2 md:-left-10 md:scale-100"
+                            >
+                                <div className="p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl min-w-[180px]">
+                                    <div className="flex items-center gap-3 mb-3">
+                                        {/* Doctor Avatar */}
+                                        <div className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center border border-foreground/10">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-foreground/60">
+                                                <circle cx="12" cy="8" r="4" />
+                                                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                            </svg>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <span className="text-sm font-semibold text-foreground">Dr. Sarah Chen</span>
+                                            <span className="text-xs text-foreground/50">Dermatology</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-foreground/50">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <polyline points="12,6 12,12 16,14" />
+                                            </svg>
+                                            <span className="text-xs font-medium text-foreground/60">10:00 AM</span>
+                                        </div>
+                                        <span className="text-xs font-medium text-foreground bg-foreground/10 px-2 py-0.5 rounded-full">Confirmed</span>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Card 3: Security Badge (Bottom Right) */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: [0, -10, 0] }}
+                                transition={{
+                                    opacity: { delay: 0.7, duration: 0.6 },
+                                    y: { delay: 1.5, duration: 6, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                                className="absolute z-20 transform transition-all duration-500
+                                    bottom-4 -right-2 scale-[0.7] origin-bottom-right
+                                    md:bottom-12 md:right-0 md:scale-100"
+                            >
+                                <div className="flex items-center gap-3 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl">
+                                    <div className="w-10 h-10 rounded-lg bg-foreground/10 flex items-center justify-center">
+                                        <Shield className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-sm font-semibold text-foreground">HIPAA Compliant</span>
+                                        <span className="text-xs text-foreground/50">Infrastructure</span>
+                                    </div>
+                                    <CheckCircle2 className="w-4 h-4 text-foreground/60 ml-1" strokeWidth={1.5} />
+                                </div>
+                            </motion.div>
+
                         </div>
+
                     </div>
 
                 </div>
             </div>
-
-            {/* Custom Styles for animations if not in tailwind config */}
-            <style jsx global>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-      `}</style>
         </section>
     );
 }
