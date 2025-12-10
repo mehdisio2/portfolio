@@ -151,7 +151,7 @@ export function HeroSection() {
                                                 <circle cx="12" cy="12" r="10" />
                                                 <polyline points="12,6 12,12 16,14" />
                                             </svg>
-                                            <span className="text-xs font-medium text-foreground/60">10:00 AM</span>
+                                            <span className="text-xs font-medium text-foreground/60 mr-2">10:00 AM</span>
                                         </div>
                                         <span className="text-xs font-medium text-foreground bg-foreground/10 px-2 py-0.5 rounded-full">Confirmed</span>
                                     </div>
