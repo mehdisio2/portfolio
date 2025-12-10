@@ -117,12 +117,13 @@ export default function CaseStudy() {
                         </div>
 
                         {/* SMALL CARD: Security */}
-                        <div className="bg-[#0B0F19] border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-600 transition-colors">
-                            <Database className="w-10 h-10 text-cyan-400" />
-                            <div>
+                        <div className="bg-[#0B0F19] border border-slate-800 rounded-3xl p-8 relative overflow-hidden group hover:border-slate-600 transition-colors">
+                            <div className="relative z-10">
+                                <Database className="w-10 h-10 text-cyan-400" />
                                 <h3 className="text-xl font-serif text-white mt-4 mb-2">Zero-Trust Data</h3>
                                 <p className="text-slate-400 text-sm">Row Level Security (RLS) ensures total isolation between patient records.</p>
                             </div>
+                            <img src="/database-rls.png" alt="Row Level Security Diagram" className="mt-4" />
                         </div>
 
                         {/* SMALL CARD: Video */}
@@ -142,6 +143,7 @@ export default function CaseStudy() {
                 <h2 className="text-3xl font-serif text-white mb-12">Architecture Highlights</h2>
 
                 <div className="space-y-12">
+                    {/* 01. TYPE SAFETY */}
                     <div className="group">
                         <h3 className="text-xl text-white mb-4 flex items-center gap-2">
                             <span className="text-cyan-400 font-mono">01.</span>
@@ -150,7 +152,6 @@ export default function CaseStudy() {
                         <p className="text-slate-400 mb-6 pl-8">
                             Database schema is automatically introspected to generate TypeScript definitions, ensuring end-to-end type safety from the Postgres DB to the React Client.
                         </p>
-                        {/* Simple Mock Code Block */}
                         <div className="pl-8">
                             <div className="bg-[#0F1422] p-6 rounded-lg border border-slate-800 font-mono text-sm overflow-x-auto text-slate-300">
                                 <p><span className="text-purple-400">interface</span> <span className="text-yellow-200">Appointment</span> {'{'}</p>
@@ -160,6 +161,38 @@ export default function CaseStudy() {
                                 <p>{'}'}</p>
                             </div>
                         </div>
+                    </div>
+
+                    {/* 02. REAL-TIME SYNC */}
+                    <div className="group">
+                        <h3 className="text-xl text-white mb-4 flex items-center gap-2">
+                            <span className="text-cyan-400 font-mono">02.</span>
+                            Event-Driven State (Realtime)
+                        </h3>
+                        <p className="text-slate-400 mb-6 pl-8">
+                            Leveraged Supabase's replication log (WAL) to push database changes to the client instantly via WebSockets. This ensures the "Waiting Room" dashboard updates live without polling.
+                        </p>
+                        <div className="pl-8">
+                            <div className="bg-[#0F1422] p-6 rounded-lg border border-slate-800 font-mono text-sm overflow-x-auto text-slate-300">
+                                <p><span className="text-purple-400">const</span> channel = supabase</p>
+                                <p className="pl-4">.channel(<span className="text-green-400">'room-updates'</span>)</p>
+                                <p className="pl-4">.on(<span className="text-green-400">'postgres_changes'</span>, event ={'>'} {'{'}</p>
+                                <p className="pl-8"><span className="text-blue-400">refreshQueue</span>(event.new);</p>
+                                <p className="pl-4">{'}'})</p>
+                                <p className="pl-4">.subscribe();</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 03. SECURITY ARCHITECTURE */}
+                    <div className="group">
+                        <h3 className="text-xl text-white mb-4 flex items-center gap-2">
+                            <span className="text-cyan-400 font-mono">03.</span>
+                            Server-Side Data Isolation
+                        </h3>
+                        <p className="text-slate-400 mb-6 pl-8">
+                            Sensitive patient records are fetched exclusively via <strong>Server Components</strong>. This ensures that raw JSON data and authentication tokens are never exposed to the client-side browser bundle.
+                        </p>
                     </div>
                 </div>
             </section>

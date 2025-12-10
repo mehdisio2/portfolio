@@ -68,8 +68,8 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 top-4 z-40 w-full font-sans", className)}
+      // Fixed navbar to ensure visibility on all pages including dark-themed ones
+      className={cn("fixed inset-x-0 top-4 z-40 w-full font-sans", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -103,8 +103,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex group",
-        visible && "bg-background/80 backdrop-blur-md border border-border/50 shadow-sm",
+        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-white px-4 py-2 lg:flex group shadow-sm",
+        visible && "bg-white/90 backdrop-blur-md border border-border/50 shadow-md",
         className,
       )}
       data-scrolled={visible}
@@ -166,8 +166,8 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-background/80 backdrop-blur-md border border-border/50 shadow-sm",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-white px-0 py-2 lg:hidden shadow-sm",
+        visible && "bg-white/90 backdrop-blur-md border border-border/50 shadow-md",
         className,
       )}
     >
