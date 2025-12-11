@@ -12,9 +12,12 @@ import {
     NavbarButton,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function SiteHeader() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const isCaseStudy = pathname?.startsWith('/work/');
 
     const navItems = [
         { name: "Expertise", link: "/#expertise" },
@@ -24,25 +27,26 @@ export function SiteHeader() {
 
     return (
         <Navbar>
-            <NavBody>
+            <NavBody className={isCaseStudy ? "bg-[#0B0F19] border-slate-800" : ""}>
                 <div className="flex items-center gap-2">
-                    <NavbarLogo />
+                    <NavbarLogo variant={isCaseStudy ? "light" : "dark"} />
                 </div>
-                <NavItems items={navItems} />
+                <NavItems items={navItems} variant={isCaseStudy ? "light" : "dark"} />
                 <div className="flex items-center gap-4">
-                    <span className="text-sm font-medium text-foreground cursor-pointer hover:text-muted-foreground transition-colors group-data-[scrolled=true]:hidden">EN | AR</span>
-                    <NavbarButton href="#" variant="primary">
+                    <span className={`text-sm font-medium cursor-pointer transition-colors group-data-[scrolled=true]:hidden ${isCaseStudy ? 'text-white hover:text-slate-300' : 'text-foreground hover:text-muted-foreground'}`}>EN | AR</span>
+                    <NavbarButton href="#" variant={isCaseStudy ? "secondary" : "primary"}>
                         Book Consultation
                     </NavbarButton>
                 </div>
             </NavBody>
 
-            <MobileNav>
+            <MobileNav className={isCaseStudy ? "bg-[#0B0F19] border-slate-800" : ""}>
                 <MobileNavHeader>
-                    <NavbarLogo />
+                    <NavbarLogo variant={isCaseStudy ? "light" : "dark"} />
                     <MobileNavToggle
                         isOpen={isMobileMenuOpen}
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className={isCaseStudy ? "text-white" : ""}
                     />
                 </MobileNavHeader>
                 <MobileNavMenu

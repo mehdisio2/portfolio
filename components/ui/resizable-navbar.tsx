@@ -29,6 +29,7 @@ interface NavItemsProps {
   }[];
   className?: string;
   onItemClick?: () => void;
+  variant?: "light" | "dark";
 }
 
 interface MobileNavProps {
@@ -103,7 +104,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-white px-4 py-2 lg:flex group shadow-sm",
+        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start bg-white px-4 py-2 lg:flex group shadow-sm rounded-sm",
         visible && "bg-white/90 backdrop-blur-md border border-border/50 shadow-md",
         className,
       )}
@@ -114,14 +115,16 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   );
 };
 
-export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
+export const NavItems = ({ items, className, onItemClick, variant = "dark" }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
+  const isLight = variant === "light";
 
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
+        isLight ? "text-slate-400" : "text-muted-foreground",
         className,
       )}
     >
@@ -129,14 +132,17 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors"
+          className={cn(
+            "relative px-4 py-2 transition-colors",
+            isLight ? "text-slate-400 hover:text-white" : "text-muted-foreground hover:text-foreground"
+          )}
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-muted/50"
+              className={cn("absolute inset-0 h-full w-full", isLight ? "bg-slate-800/50" : "bg-muted/50")}
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -157,7 +163,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         width: visible ? "90%" : "100%",
         paddingRight: visible ? "12px" : "0px",
         paddingLeft: visible ? "12px" : "0px",
-        borderRadius: visible ? "4px" : "2rem",
+        borderRadius: visible ? "2px" : "4px",
         y: visible ? 20 : 0,
       }}
       transition={{
@@ -206,7 +212,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-background px-4 py-8 shadow-lg border border-border",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 bg-background px-4 py-8 shadow-lg border border-border",
             className,
           )}
         >
@@ -220,26 +226,29 @@ export const MobileNavMenu = ({
 export const MobileNavToggle = ({
   isOpen,
   onClick,
+  className,
 }: {
   isOpen: boolean;
   onClick: () => void;
+  className?: string;
 }) => {
   return isOpen ? (
-    <IconX className="text-foreground" onClick={onClick} />
+    <IconX className={cn("text-foreground", className)} onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-foreground" onClick={onClick} />
+    <IconMenu2 className={cn("text-foreground", className)} onClick={onClick} />
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ variant = "dark" }: { variant?: "light" | "dark" }) => {
+  const isLight = variant === "light";
   return (
     <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      href="/"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
       <div className="flex flex-col">
-        <span className="font-medium text-foreground leading-none">El Mahdi Badilou</span>
-        <span className="text-xs text-muted-foreground leading-none mt-0.5">Clinical Systems</span>
+        <span className={cn("font-medium leading-none", isLight ? "text-white" : "text-foreground")}>El Mahdi Badilou</span>
+        <span className={cn("text-xs leading-none mt-0.5", isLight ? "text-slate-400" : "text-muted-foreground")}>Clinical Systems</span>
       </div>
     </a>
   );
