@@ -21,7 +21,7 @@ export function ApproachSection() {
     ]
 
     return (
-        <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
+        <section id="approach" className="relative py-24 lg:py-32 bg-white overflow-hidden">
             {/* Subtle dot grid background pattern */}
             <div
                 className="absolute inset-0 opacity-[0.05]"

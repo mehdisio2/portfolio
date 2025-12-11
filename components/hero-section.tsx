@@ -33,7 +33,7 @@ export function HeroSection() {
                             </button>
 
                             <Link
-                                href="#"
+                                href="/work/telemed"
                                 className="group flex items-center text-foreground font-medium hover:text-primary transition-colors"
                             >
                                 View Telemedicine Case Study

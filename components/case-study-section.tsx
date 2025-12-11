@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function CaseStudySection() {
     const metrics = [
@@ -8,7 +9,7 @@ export function CaseStudySection() {
     ]
 
     return (
-        <section className="relative bg-[#0B1121] py-20 lg:py-32 overflow-hidden">
+        <section id="case-study" className="relative bg-[#0B1121] py-20 lg:py-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Column - The Data */}
@@ -38,10 +39,10 @@ export function CaseStudySection() {
 
                         {/* Ghost Button */}
                         <div className="pt-4">
-                            <button className="group inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-mono text-sm tracking-wide hover:bg-white hover:text-[#0B1121] transition-all duration-300">
+                            <Link href="/work/telemed" className="group inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-mono text-sm tracking-wide hover:bg-white hover:text-[#0B1121] transition-all duration-300">
                                 Read Full Case Study
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

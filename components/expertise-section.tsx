@@ -31,7 +31,7 @@ export function ExpertiseSection() {
     const [activeItem, setActiveItem] = useState<number | null>(1)
 
     return (
-        <section className="min-h-screen bg-[#FAFAFA] py-24 px-6 md:px-12 lg:px-24">
+        <section id="expertise" className="min-h-screen bg-[#FAFAFA] py-24 px-6 md:px-12 lg:px-24">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="mb-16">

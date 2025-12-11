@@ -17,9 +17,9 @@ export function SiteHeader() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { name: "Expertise", link: "#expertise" },
-        { name: "Approach", link: "#approach" },
-        { name: "Case Study", link: "#case-study" },
+        { name: "Expertise", link: "/#expertise" },
+        { name: "Approach", link: "/#approach" },
+        { name: "Case Study", link: "/work/telemed" },
     ];
 
     return (
@@ -59,21 +59,21 @@ export function SiteHeader() {
                     ))}
                     {/* Specific order: Button (above), Case Study, Expertise, Approach, Toggle */}
                     <a
-                        href="#case-study"
+                        href="/work/telemed"
                         className="block w-full px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Case Study
                     </a>
                     <a
-                        href="#expertise"
+                        href="/#expertise"
                         className="block w-full px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Expertise
                     </a>
                     <a
-                        href="#approach"
+                        href="/#approach"
                         className="block w-full px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
