@@ -69,11 +69,12 @@ export function HeroSection() {
                             {/* LAYER 1: The Person (Base Layer) */}
                             <div className="relative z-0 w-[240px] sm:w-[320px] lg:w-[500px]">
                                 <Image
-                                    src="/consultant-profile.png"
+                                    src="/consultant-profile.webp"
                                     alt="Clinical Systems Architect"
-                                    width={1200}
-                                    height={1200}
+                                    width={1000}
+                                    height={1500}
                                     priority
+                                    sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 500px"
                                     className="object-contain drop-shadow-lg"
                                 />
                             </div>
