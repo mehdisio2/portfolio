@@ -9,21 +9,21 @@ const expertiseItems = [
         number: "01",
         title: "The Patient Acquisition Engine",
         body: "A practice cannot grow if it cannot be found. I engineer websites specifically for Search Dominance (SEO) and local visibility. By optimizing site velocity and mobile architecture, I ensure your clinic captures high-intent patients searching in your specific region.",
-        imageQuery: "abstract upward trend line graph minimal blue grey tones",
+        imageSrc: "/expertise/growth-chart.svg",
     },
     {
         id: 2,
         number: "02",
         title: 'The "Private Practice" Aesthetic',
         body: "Trust is established in milliseconds. For cosmetic and dental professionals, your digital presence is your new waiting room. I design bespoke, luxury interfaces that mirror the quality of your clinical care—positioning you as the premium choice in your market.",
-        imageQuery: "frosted glass white marble texture luxury interior architecture minimal",
+        imageSrc: "/expertise/luxury-interior.svg",
     },
     {
         id: 3,
         number: "03",
         title: "Medical-Grade Infrastructure",
         body: "I do not use cheap templates. I build on Enterprise-Grade Cloud Architecture (Next.js & Supabase). This means your site is hack-proof and fast today, but technically ready to integrate secure patient portals and telemedicine features whenever you are ready to scale.",
-        imageQuery: "minimal wireframe server rack secure padlock technical lines blueprint",
+        imageSrc: "/expertise/infrastructure.svg",
     },
 ]
 
@@ -100,7 +100,7 @@ export function ExpertiseSection() {
                                         )}
                                     >
                                         <img
-                                            src={`/.jpg?height=600&width=800&query=${encodeURIComponent(item.imageQuery)}`}
+                                            src={item.imageSrc}
                                             alt={item.title}
                                             className="w-full h-full object-cover"
                                         />

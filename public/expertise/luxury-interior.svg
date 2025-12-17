@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Marble texture gradient -->
+    <linearGradient id="marbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFAFA"/>
+      <stop offset="25%" style="stop-color:#F5F5F5"/>
+      <stop offset="50%" style="stop-color:#EBEBEB"/>
+      <stop offset="75%" style="stop-color:#F0F0F0"/>
+      <stop offset="100%" style="stop-color:#FAFAFA"/>
+    </linearGradient>
+    
+    <!-- Champagne/rose-gold accent -->
+    <linearGradient id="champagneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A574"/>
+      <stop offset="50%" style="stop-color:#C8A066"/>
+      <stop offset="100%" style="stop-color:#BFA076"/>
+    </linearGradient>
+    
+    <!-- Frosted glass effect -->
+    <filter id="frost">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    
+    <!-- Soft shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.1"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#marbleGrad)"/>
+  
+  <!-- Marble veins -->
+  <g stroke="#E5E7EB" stroke-width="0.5" opacity="0.4">
+    <path d="M 0,200 Q 200,180 400,250 T 800,200" fill="none"/>
+    <path d="M 0,350 Q 300,320 500,380 T 800,350" fill="none"/>
+    <path d="M 0,480 Q 250,450 550,500 T 800,470" fill="none"/>
+  </g>
+  
+  <!-- Architectural frame element -->
+  <rect x="100" y="80" width="600" height="440" fill="none" stroke="#D1D5DB" stroke-width="1" rx="4"/>
+  <rect x="120" y="100" width="560" height="400" fill="none" stroke="#E5E7EB" stroke-width="0.5" rx="2"/>
+  
+  <!-- Frosted glass panel -->
+  <rect x="200" y="150" width="400" height="300" rx="12" fill="white" opacity="0.7" filter="url(#softShadow)"/>
+  <rect x="200" y="150" width="400" height="300" rx="12" fill="none" stroke="white" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Decorative gold accent line -->
+  <line x1="220" y1="180" x2="380" y2="180" stroke="url(#champagneGrad)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Premium typography placeholder -->
+  <text x="220" y="220" fill="#1F2937" font-family="Playfair Display, Georgia, serif" font-size="28" font-weight="600">Private Practice</text>
+  <text x="220" y="260" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="14" letter-spacing="0.1em">AESTHETIC MEDICINE</text>
+  
+  <!-- Decorative elements -->
+  <g transform="translate(220, 290)">
+    <rect width="340" height="1" fill="#E5E7EB"/>
+  </g>
+  
+  <text x="220" y="330" fill="#9CA3AF" font-family="Inter, system-ui, sans-serif" font-size="12" font-style="italic">
+    "Your digital presence is your new waiting room"
+  </text>
+  
+  <!-- Star rating -->
+  <g transform="translate(220, 360)">
+    <polygon points="10,0 13,7 20,7 14,12 16,20 10,15 4,20 6,12 0,7 7,7" fill="url(#champagneGrad)"/>
+    <polygon points="35,0 38,7 45,7 39,12 41,20 35,15 29,20 31,12 25,7 32,7" fill="url(#champagneGrad)"/>
+    <polygon points="60,0 63,7 70,7 64,12 66,20 60,15 54,20 56,12 50,7 57,7" fill="url(#champagneGrad)"/>
+    <polygon points="85,0 88,7 95,7 89,12 91,20 85,15 79,20 81,12 75,7 82,7" fill="url(#champagneGrad)"/>
+    <polygon points="110,0 113,7 120,7 114,12 116,20 110,15 104,20 106,12 100,7 107,7" fill="url(#champagneGrad)"/>
+    <text x="140" y="15" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="12">5.0 Patient Rating</text>
+  </g>
+  
+  <!-- Luxury brand indicators -->
+  <g transform="translate(220, 410)">
+    <rect width="100" height="24" rx="4" fill="#F3F4F6"/>
+    <text x="50" y="16" text-anchor="middle" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="10">HIPAA CERTIFIED</text>
+  </g>
+  
+  <g transform="translate(340" y="410">
+    <rect x="340" y="410" width="100" height="24" rx="4" fill="#F3F4F6"/>
+    <text x="390" y="426" text-anchor="middle" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="10">SOC 2 TYPE II</text>
+  </g>
+</svg>
