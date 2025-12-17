@@ -33,7 +33,6 @@ export function SiteHeader() {
                 </div>
                 <NavItems items={navItems} variant={isCaseStudy ? "light" : "dark"} />
                 <div className="flex items-center gap-4">
-                    <span className={`text-sm font-medium cursor-pointer transition-colors group-data-[scrolled=true]:hidden ${isCaseStudy ? 'text-white hover:text-slate-300' : 'text-foreground hover:text-muted-foreground'}`}>EN | AR</span>
                     <NavbarButton href="#" variant={isCaseStudy ? "secondary" : "primary"}>
                         Book Consultation
                     </NavbarButton>
@@ -83,9 +82,6 @@ export function SiteHeader() {
                     >
                         Approach
                     </a>
-                    <div className="px-4 py-2 text-lg font-medium text-foreground">
-                        EN | AR
-                    </div>
                 </MobileNavMenu>
             </MobileNav>
         </Navbar>

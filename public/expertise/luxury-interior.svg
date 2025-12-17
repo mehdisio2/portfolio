@@ -85,8 +85,8 @@
     <text x="50" y="16" text-anchor="middle" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="10">HIPAA CERTIFIED</text>
   </g>
   
-  <g transform="translate(340" y="410">
-    <rect x="340" y="410" width="100" height="24" rx="4" fill="#F3F4F6"/>
-    <text x="390" y="426" text-anchor="middle" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="10">SOC 2 TYPE II</text>
+  <g transform="translate(340, 410)">
+    <rect width="100" height="24" rx="4" fill="#F3F4F6"/>
+    <text x="50" y="16" text-anchor="middle" fill="#6B7280" font-family="Inter, system-ui, sans-serif" font-size="10">SOC 2 TYPE II</text>
   </g>
 </svg>
