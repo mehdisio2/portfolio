@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 import { SiteHeader } from "@/components/site-header";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <SiteHeader />
         {children}
+        <Analytics />
       </body>
     </html>
   );
