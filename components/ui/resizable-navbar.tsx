@@ -123,7 +123,7 @@ export const NavItems = ({ items, className, onItemClick, variant = "dark" }: Na
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
+        "hidden flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
         isLight ? "text-slate-400" : "text-muted-foreground",
         className,
       )}
