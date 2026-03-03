@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export function CaseStudySection() {
     const metrics = [
-        { value: "100%", label: "Compliance" },
-        { value: "< 1s", label: "Load Time" },
-        { value: "Zero", label: "Data Leaks" },
+        { value: "100%", label: "Conformité" },
+        { value: "< 1s", label: "Chargement" },
+        { value: "Zéro", label: "Fuites de données" },
     ]
 
     return (
@@ -15,16 +15,16 @@ export function CaseStudySection() {
                     {/* Left Column - The Data */}
                     <div className="space-y-8">
                         {/* Eyebrow */}
-                        <span className="font-mono text-xs tracking-widest text-cyan-400">// SELECTED WORK</span>
+                        <span className="font-mono text-xs tracking-widest text-cyan-400">// PROJET SÉLECTIONNÉ</span>
 
                         {/* Headline */}
                         <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white leading-tight">
-                            Telemedicine Redefined.
+                            La Télémédecine Redéfinie.
                         </h2>
 
                         {/* Context */}
                         <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
-                            A custom-engineered patient portal designed to automate intake and secure sensitive data.
+                            Un portail patient sur mesure conçu pour automatiser les admissions et sécuriser les données sensibles.
                         </p>
 
                         {/* Metrics Grid */}
@@ -40,7 +40,7 @@ export function CaseStudySection() {
                         {/* Ghost Button */}
                         <div className="pt-4">
                             <Link href="/work/telemed" className="group inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-mono text-sm tracking-wide hover:bg-white hover:text-[#0B1121] transition-all duration-300">
-                                Read Full Case Study
+                                Lire l'étude de cas complète
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                             </Link>
                         </div>
@@ -58,14 +58,14 @@ export function CaseStudySection() {
                             {/* Laptop Frame */}
                             <div className="relative bg-slate-800 rounded-xl p-2 shadow-2xl">
                                 {/* Screen */}
-                                <div className="relative bg-slate-900 rounded-lg overflow-hidden aspect-[16/10]">
+                                <div className="relative bg-slate-900 rounded-lg overflow-hidden aspect-16/10">
                                     <img
                                         src="/telemedicine-app.png"
                                         alt="Telemedicine App Dashboard"
                                         className="w-full h-full object-cover"
                                     />
                                     {/* Screen Glare */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                                    <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent pointer-events-none" />
                                 </div>
                                 {/* Laptop Base */}
                                 <div className="h-3 bg-slate-700 rounded-b-xl mt-2 mx-8" />

@@ -2,30 +2,30 @@ import { Check } from "lucide-react"
 
 const engagementModels = [
     {
-        title: "Performance Re-Architecture",
-        subtitle: "Role: Technical Lead & Developer",
+        title: "Re-Architecture des Performances",
+        subtitle: "Rôle : Équipe Agence",
         description:
-            "For practices held back by slow, generic websites. I personally audit and rebuild your digital presence using high-performance code, ensuring your site loads instantly and meets every technical SEO standard.",
+            "Pour les cabinets freinés par des sites web lents et génériques. Nous auditons et reconstruisons votre présence numérique avec un code haute performance, garantissant un chargement instantané de votre site et le respect de toutes les normes SEO techniques.",
         features: [
-            { name: "Next.js Migration", detail: "Sub-second load times" },
-            { name: "Technical SEO Audit & Fixes", detail: "Schema/Structure" },
-            { name: "Mobile-First Interface Design", detail: null },
-            { name: "Booking Flow Optimization", detail: null },
+            { name: "Migration vers Next.js", detail: "Temps de chargement inférieur à la seconde" },
+            { name: "Audit SEO Technique & Correctifs", detail: "Schéma/Structure" },
+            { name: "Design d'Interface orienté Mobile", detail: null },
+            { name: "Optimisation du Tunnel de Réservation", detail: null },
         ],
-        bestFor: "Private Practice / Dental / Derma",
+        bestFor: "Cabinets Privés / Dentaires / Dermato",
     },
     {
-        title: "Systems Architecture",
-        subtitle: "Role: Interim CTO / Engineer",
+        title: "Architecture Systèmes",
+        subtitle: "Rôle : Partenaires Technologiques",
         description:
-            "For clinics hitting operational ceilings. I design and build secure, custom software infrastructure to solve specific bottlenecks—from automated patient triage to HIPAA-compliant data storage.",
+            "Pour les cliniques atteignant un plafond opérationnel. Nous concevons et développons une infrastructure logicielle sécurisée sur mesure pour résoudre des blocages spécifiques, allant du triage automatisé des patients au stockage de données conforme aux normes de la CNDP.",
         features: [
-            { name: "Custom Web Application Development", detail: null },
-            { name: "Secure Database Architecture", detail: "Supabase" },
-            { name: "Telemedicine Video Integration", detail: null },
-            { name: "Patient Portal Implementation", detail: null },
+            { name: "Développement d'Applications Web sur mesure", detail: null },
+            { name: "Architecture Base de Données Sécurisée", detail: "Supabase" },
+            { name: "Intégration Vidéo de Télémédecine", detail: null },
+            { name: "Mise en place de Portails Patients", detail: null },
         ],
-        bestFor: "Scaling Clinics / Telehealth Startups",
+        bestFor: "Cliniques en Croissance / Startups en Télésanté",
     },
 ]
 
@@ -37,9 +37,9 @@ export function EngagementModelsSection() {
                 <div className="text-center mb-16 lg:mb-20">
                     {/* Eyebrow */}
                     <span className="font-mono text-xs tracking-widest text-slate-500 uppercase mb-4 block">
-            // ENGAGEMENT MODELS
+            // MODÈLES D'ENGAGEMENT
                     </span>
-                    <h2 className="font-serif text-4xl lg:text-5xl text-slate-900">How I Apply My Expertise.</h2>
+                    <h2 className="font-serif text-4xl lg:text-5xl text-slate-900">Comment Nous Appliquons Notre Expertise.</h2>
                 </div>
 
                 {/* Cards Grid */}
@@ -59,10 +59,10 @@ export function EngagementModelsSection() {
                             <p className="text-slate-600 leading-relaxed mb-8">{model.description}</p>
 
                             {/* Features List */}
-                            <ul className="space-y-4 mb-8 flex-grow">
+                            <ul className="space-y-4 mb-8 grow">
                                 {model.features.map((feature) => (
                                     <li key={feature.name} className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0" />
+                                        <Check className="w-5 h-5 text-slate-900 mt-0.5 shrink-0" />
                                         <span className="text-slate-700">
                                             <span className="font-medium">{feature.name}</span>
                                             {feature.detail && <span className="text-slate-500"> ({feature.detail})</span>}
@@ -72,8 +72,8 @@ export function EngagementModelsSection() {
                             </ul>
 
                             <div className="pt-6 border-t border-slate-100 space-y-2">
-                                <p className="font-mono text-xs tracking-wide text-slate-500">BEST FOR: {model.bestFor}</p>
-                                <p className="font-mono text-xs tracking-wide text-slate-400">EXECUTION: DIRECT BY EL MAHDI</p>
+                                <p className="font-mono text-xs tracking-wide text-slate-500">IDÉAL POUR : {model.bestFor}</p>
+                                <p className="font-mono text-xs tracking-wide text-slate-400">EXÉCUTION : EXPERTS EN INTERNE</p>
                             </div>
                         </div>
                     ))}

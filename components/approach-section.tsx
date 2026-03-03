@@ -1,22 +1,22 @@
 export function ApproachSection() {
     const steps = [
         {
-            phase: "// PHASE_01 : DIAGNOSIS",
-            headline: "The Digital Diagnosis",
-            body: "I begin with a forensic audit of your local competition and SEO gaps. I identify exactly where revenue is leaking before proposing a technical scope.",
-            output: "[ OUTPUT: STRATEGY_DOC.PDF ]",
+            phase: "// PHASE_01 : DIAGNOSTIC",
+            headline: "Le Diagnostic Digital",
+            body: "Nous commençons par un audit approfondi de votre concurrence locale et des opportunités SEO. Nous identifions exactement où les revenus vous échappent avant de proposer un périmètre technique.",
+            output: "[ LIVRABLE: DOCUMENT_STRATEGIE.PDF ]",
         },
         {
             phase: "// PHASE_02 : ARCHITECTURE",
-            headline: "System Engineering",
-            body: "No templates. I design bespoke clinical environments using Next.js. The database is engineered for HIPAA compliance and sub-second load times.",
+            headline: "Ingénierie Système",
+            body: "Pas de modèles préconçus. Nous concevons des environnements cliniques sur mesure avec Next.js. La base de données est conçue pour la conformité CNDP et des temps de chargement ultra-rapides.",
             output: "[ STACK: NEXT.JS / SUPABASE ]",
         },
         {
-            phase: "// PHASE_03 : INTEGRATION",
-            headline: "Seamless Deployment",
-            body: "Zero-downtime launch. I handle domain migration and provide direct technical triage to ensure your front-desk staff is ready on day one.",
-            output: "[ STATUS: PRODUCTION_READY ]",
+            phase: "// PHASE_03 : INTÉGRATION",
+            headline: "Déploiement Continu",
+            body: "Lancement sans interruption. Nous gérons la migration de domaine et fournissons un support technique direct pour nous assurer que votre personnel d'accueil est prêt dès le premier jour.",
+            output: "[ STATUT: EN_PRODUCTION ]",
         },
     ]
 
@@ -35,10 +35,10 @@ export function ApproachSection() {
                 {/* Section Header */}
                 <div className="text-center mb-20 lg:mb-24">
                     {/* Eyebrow Label */}
-                    <p className="font-mono text-xs tracking-[0.3em] text-slate-400 uppercase mb-4">The Technical Protocol</p>
+                    <p className="font-mono text-xs tracking-[0.3em] text-slate-400 uppercase mb-4">Le Protocole Technique</p>
                     {/* Large Serif Headline */}
                     <h2 className="font-serif text-4xl lg:text-5xl text-[#0f172a] tracking-tight">
-                        The Clinical Development Standard.
+                        Le Standard de Développement Clinique.
                     </h2>
                 </div>
 
@@ -76,7 +76,7 @@ export function ApproachSection() {
                                     <h3 className="font-serif text-xl lg:text-2xl text-slate-900 mb-4">{step.headline}</h3>
 
                                     {/* Body */}
-                                    <p className="font-sans text-sm text-slate-600 leading-relaxed mb-6 flex-grow">{step.body}</p>
+                                    <p className="font-sans text-sm text-slate-600 leading-relaxed mb-6 grow">{step.body}</p>
 
                                     {/* Bottom Spec */}
                                     <p className="font-mono text-[10px] tracking-wide text-slate-400">{step.output}</p>

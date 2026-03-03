@@ -5,19 +5,19 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
     {
-        question: "Why do you avoid WordPress/Webflow?",
+        question: "Pourquoi évitez-vous WordPress/Webflow ?",
         answer:
-            "Think of WordPress like renting a clinic—you are limited by someone else's rules. I build on Next.js, which is enterprise-grade infrastructure. This ensures your digital presence is visually bespoke (no generic templates), instant-loading (better for Google), hack-proof (no plugins), and most importantly, technically ready to scale into a full telemedicine app whenever you are ready to grow.",
+            "Voyez WordPress comme la location d'une clinique : vous êtes limité par les règles d'un tiers. Nous développons sur Next.js, une infrastructure de niveau entreprise. Cela garantit que votre présence numérique est visuellement sur mesure (aucun modèle générique), à chargement instantané (meilleur pour Google), protégée contre le piratage (pas de plugins) et, surtout, prête techniquement à évoluer vers une application complète de télémédecine lorsque vous serez prêt à grandir.",
     },
     {
-        question: "What is the support structure post-launch?",
+        question: "Quelle est la structure d'assistance après le lancement ?",
         answer:
-            "I do not disappear. I act as your technical partner. All engagements include a 30-day hyper-care period, with options for ongoing retainer packages to manage security and updates.",
+            "Nous ne disparaissons pas. Nous agissons en tant que partenaire technologique. Tous les engagements incluent une période d'hyper-assistance de 30 jours, avec des options de forfaits de maintenance continus pour gérer la sécurité et les mises à jour.",
     },
     {
-        question: "What is the typical development timeline?",
+        question: "Quel est le délai de développement typique ?",
         answer:
-            "I accept limited engagements to ensure focus. A standard practice build launches in 2-3 weeks; complex clinical infrastructure takes 4-6 weeks.",
+            "Nous acceptons un nombre limité de projets pour garantir notre concentration. La création d'un cabinet standard prend de 2 à 3 semaines ; une infrastructure clinique complexe nécessite de 4 à 6 semaines.",
     },
 ]
 
@@ -33,8 +33,8 @@ export function FaqSection() {
             <div className="max-w-3xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <span className="font-mono text-xs tracking-widest text-slate-500 mb-4 block">// CLARITY</span>
-                    <h2 className="font-serif text-4xl lg:text-5xl text-slate-900">Operational Details.</h2>
+                    <span className="font-mono text-xs tracking-widest text-slate-500 mb-4 block">// CLARTÉ</span>
+                    <h2 className="font-serif text-4xl lg:text-5xl text-slate-900">Détails Opérationnels.</h2>
                 </div>
 
                 {/* Accordion */}
@@ -47,7 +47,7 @@ export function FaqSection() {
                             >
                                 <span className="font-serif text-lg lg:text-xl text-slate-800 pr-8">{faq.question}</span>
                                 <ChevronDown
-                                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? "rotate-180" : ""
+                                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ${openIndex === index ? "rotate-180" : ""
                                         }`}
                                 />
                             </button>

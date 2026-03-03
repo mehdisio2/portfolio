@@ -17,8 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "El Mahdi Badilou | Clinical Systems",
-  description: "Digital infrastructure for high-performing private practices",
+  title: "Digitale Santé | Infrastructure Clinique",
+  description: "Infrastructure numérique pour les cliniques et cabinets privés performants au Maroc.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >

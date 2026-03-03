@@ -21,8 +21,8 @@ export function SiteHeader() {
 
     const navItems = [
         { name: "Expertise", link: "/#expertise" },
-        { name: "Approach", link: "/#approach" },
-        { name: "Case Study", link: "/work/telemed" },
+        { name: "Méthodologie", link: "/#approach" },
+        { name: "Étude de Cas", link: "/work/telemed" },
     ];
 
     return (
@@ -34,7 +34,7 @@ export function SiteHeader() {
                 <NavItems items={navItems} variant={isCaseStudy ? "light" : "dark"} />
                 <div className="flex items-center gap-4">
                     <NavbarButton href="#" variant={isCaseStudy ? "secondary" : "primary"}>
-                        Book Consultation
+                        Réserver une Consultation
                     </NavbarButton>
                 </div>
             </NavBody>
@@ -54,7 +54,7 @@ export function SiteHeader() {
                 >
                     <div className="flex flex-col w-full gap-2 mt-4 px-4">
                         <NavbarButton href="#" variant="primary" className="w-full">
-                            Book Consultation
+                            Réserver une Consultation
                         </NavbarButton>
                     </div>
                     {navItems.slice().reverse().map((item, idx) => ( // Render specific order if needed, but requirements say: custom order
@@ -66,7 +66,7 @@ export function SiteHeader() {
                         className="block w-full px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
-                        Case Study
+                        Étude de Cas
                     </a>
                     <a
                         href="/#expertise"
@@ -80,7 +80,7 @@ export function SiteHeader() {
                         className="block w-full px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
-                        Approach
+                        Méthodologie
                     </a>
                 </MobileNavMenu>
             </MobileNav>

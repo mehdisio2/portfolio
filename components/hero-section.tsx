@@ -13,27 +13,27 @@ export function HeroSection() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-muted/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
                 <span className="mb-6 text-xs font-semibold tracking-widest text-muted-foreground uppercase">
-                    Digital Infrastructure for Private Practice
+                    Infrastructure Digitale pour Cliniques & Cabinets Privés
                 </span>
 
                 <h1 className="mb-6 text-5xl lg:text-7xl font-serif font-bold tracking-tight text-foreground leading-tight px-4 max-w-4xl">
-                    High-Performance Digital Infrastructure for Private Practice.
+                    Infrastructure Digitale Haute Performance pour la Santé au Maroc.
                 </h1>
 
-                <p className="mb-10 text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                    Specialized consultant helping practices in the US, Switzerland, and the Gulf streamline patient access while ensuring absolute compliance.
+                <p className="mb-10 text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
+                    Agence digitale de premier plan aidant les cabinets médicaux et cliniques marocains à optimiser l'accès des patients tout en garantissant une conformité réglementaire absolue.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 w-full">
                     <button className="h-12 px-8 rounded-md bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors shadow-sm">
-                        Book Consultation
+                        Réserver une Consultation
                     </button>
 
                     <Link
                         href="/work/telemed"
                         className="group flex items-center text-foreground font-medium hover:text-primary transition-colors"
                     >
-                        View Telemedicine Case Study
+                        Voir l'Étude de Cas Télémedecine
                         <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                     </Link>
                 </div>
@@ -41,15 +41,15 @@ export function HeroSection() {
                 <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-foreground/60 text-sm font-medium border-t border-border pt-10 w-full max-w-3xl">
                     <div className="flex items-center gap-2">
                         <Shield className="w-4 h-4 text-foreground/50" strokeWidth={1.5} />
-                        <span>HIPAA Ready</span>
+                        <span>Conforme CNDP</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Lock className="w-4 h-4 text-foreground/50" strokeWidth={1.5} />
-                        <span>Bank-Grade Security</span>
+                        <span>Sécurité Bancaire</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Globe className="w-4 h-4 text-foreground/50" strokeWidth={1.5} />
-                        <span>Native Arabic Support</span>
+                        <span>Bilingue (Darija & Français)</span>
                     </div>
                 </div>
             </div>

@@ -7,22 +7,22 @@ const expertiseItems = [
     {
         id: 1,
         number: "01",
-        title: "The Patient Acquisition Engine",
-        body: "A practice cannot grow if it cannot be found. I engineer websites specifically for Search Dominance (SEO) and local visibility. By optimizing site velocity and mobile architecture, I ensure your clinic captures high-intent patients searching in your specific region.",
+        title: "Le Moteur d'Acquisition de Patients",
+        body: "Un cabinet ne peut pas se développer s'il est introuvable. Nous concevons des sites web spécifiquement pour la Domination des Recherches (SEO) et la visibilité locale. En optimisant la vitesse du site et l'architecture mobile, nous nous assurons que votre clinique capte les patients à forte intention de recherche dans votre région.",
         imageSrc: "/expertise/growth-chart.svg",
     },
     {
         id: 2,
         number: "02",
-        title: 'The "Private Practice" Aesthetic',
-        body: "Trust is established in milliseconds. For cosmetic and dental professionals, your digital presence is your new waiting room. I design bespoke, luxury interfaces that mirror the quality of your clinical care—positioning you as the premium choice in your market.",
+        title: 'L\'Esthétique "Cabinet Privé"',
+        body: "La confiance s'établit en quelques millisecondes. Pour les professionnels de l'esthétique et du dentaire, votre présence numérique est votre nouvelle salle d'attente. Nous concevons des interfaces de luxe sur mesure qui reflètent la qualité de vos soins cliniques, vous positionnant comme le choix premium de votre marché.",
         imageSrc: "/expertise/luxury-interior.svg",
     },
     {
         id: 3,
         number: "03",
-        title: "Medical-Grade Infrastructure",
-        body: "I do not use cheap templates. I build on Enterprise-Grade Cloud Architecture (Next.js & Supabase). This means your site is hack-proof and fast today, but technically ready to integrate secure patient portals and telemedicine features whenever you are ready to scale.",
+        title: "Infrastructure de Qualité Médicale",
+        body: "Nous n'utilisons pas de modèles bon marché. Nous construisons sur une Architecture Cloud d'Entreprise (Next.js & Supabase). Cela signifie que votre site est ultra-rapide et protégé contre le piratage dès aujourd'hui, tout en étant techniquement prêt à intégrer des portails patients sécurisés et des fonctionnalités de télémédecine dès que vous serez prêt à évoluer.",
         imageSrc: "/expertise/infrastructure.svg",
     },
 ]
@@ -33,11 +33,10 @@ export function ExpertiseSection() {
     return (
         <section id="expertise" className="min-h-screen bg-[#FAFAFA] py-24 px-6 md:px-12 lg:px-24">
             <div className="max-w-7xl mx-auto">
-                {/* Section Header */}
                 <div className="mb-16">
                     <span className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground">Expertise</span>
                     <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 text-foreground tracking-tight text-balance">
-                        A Practice Built for Growth
+                        Un Cabinet Taillé pour la Croissance
                     </h2>
                 </div>
 
@@ -90,7 +89,7 @@ export function ExpertiseSection() {
                     {/* Right Side - Sticky Image */}
                     <div className="hidden lg:block">
                         <div className="sticky top-24">
-                            <div className="aspect-[4/3] bg-[#EBEDF0] rounded-sm overflow-hidden relative">
+                            <div className="aspect-4/3 bg-[#EBEDF0] rounded-sm overflow-hidden relative">
                                 {expertiseItems.map((item) => (
                                     <div
                                         key={item.id}
@@ -110,7 +109,7 @@ export function ExpertiseSection() {
                                 {activeItem === null && (
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <span className="font-mono text-xs text-muted-foreground tracking-wider uppercase">
-                                            Select an item
+                                            Sélectionnez un élément
                                         </span>
                                     </div>
                                 )}
