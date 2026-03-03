@@ -7,22 +7,22 @@ const expertiseItems = [
     {
         id: 1,
         number: "01",
-        title: "Le Moteur d'Acquisition de Patients",
-        body: "Un cabinet ne peut pas se développer s'il est introuvable. Nous concevons des sites web spécifiquement pour la Domination des Recherches (SEO) et la visibilité locale. En optimisant la vitesse du site et l'architecture mobile, nous nous assurons que votre clinique capte les patients à forte intention de recherche dans votre région.",
+        title: "Acquisition & Fidélisation WhatsApp",
+        body: "Transformez votre site web en un moteur de rendez-vous. Intégration native WhatsApp pour les rappels automatiques, la prise de RDV et le suivi post-consultation.",
         imageSrc: "/expertise/growth-chart.svg",
     },
     {
         id: 2,
         number: "02",
-        title: 'L\'Esthétique "Cabinet Privé"',
-        body: "La confiance s'établit en quelques millisecondes. Pour les professionnels de l'esthétique et du dentaire, votre présence numérique est votre nouvelle salle d'attente. Nous concevons des interfaces de luxe sur mesure qui reflètent la qualité de vos soins cliniques, vous positionnant comme le choix premium de votre marché.",
+        title: 'L\'esthétique "Cabinet Premium"',
+        body: "Un design qui reflète l'excellence de vos soins. Nous créons des vitrines digitales qui instaurent la confiance avant même la première consultation.",
         imageSrc: "/expertise/luxury-interior.svg",
     },
     {
         id: 3,
         number: "03",
-        title: "Infrastructure de Qualité Médicale",
-        body: "Nous n'utilisons pas de modèles bon marché. Nous construisons sur une Architecture Cloud d'Entreprise (Next.js & Supabase). Cela signifie que votre site est ultra-rapide et protégé contre le piratage dès aujourd'hui, tout en étant techniquement prêt à intégrer des portails patients sécurisés et des fonctionnalités de télémédecine dès que vous serez prêt à évoluer.",
+        title: "Prêt pour l'AMO & la Digitalisation",
+        body: "Une infrastructure conçue pour s'interfacer avec les nouveaux flux CNSS/CNOPS. Générez vos documents et gérez vos données patients en totale conformité avec les exigences de 2026.",
         imageSrc: "/expertise/infrastructure.svg",
     },
 ]

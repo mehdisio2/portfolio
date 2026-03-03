@@ -5,19 +5,19 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
     {
-        question: "Pourquoi évitez-vous WordPress/Webflow ?",
+        question: "Est-ce que mon site sera conforme à la loi 09-08 ?",
         answer:
-            "Voyez WordPress comme la location d'une clinique : vous êtes limité par les règles d'un tiers. Nous développons sur Next.js, une infrastructure de niveau entreprise. Cela garantit que votre présence numérique est visuellement sur mesure (aucun modèle générique), à chargement instantané (meilleur pour Google), protégée contre le piratage (pas de plugins) et, surtout, prête techniquement à évoluer vers une application complète de télémédecine lorsque vous serez prêt à grandir.",
+            "Absolument. Chaque projet inclut le chiffrement des données, l'hébergement au Maroc et l'assistance pour vos déclarations CNDP.",
     },
     {
-        question: "Quelle est la structure d'assistance après le lancement ?",
+        question: "Comment fonctionne l'intégration WhatsApp ?",
         answer:
-            "Nous ne disparaissons pas. Nous agissons en tant que partenaire technologique. Tous les engagements incluent une période d'hyper-assistance de 30 jours, avec des options de forfaits de maintenance continus pour gérer la sécurité et les mises à jour.",
+            "Nous connectons votre site à l'API WhatsApp Business pour automatiser les confirmations de RDV sans intervention manuelle de votre secrétaire.",
     },
     {
-        question: "Quel est le délai de développement typique ?",
+        question: "Est-ce compatible avec mon logiciel actuel ?",
         answer:
-            "Nous acceptons un nombre limité de projets pour garantir notre concentration. La création d'un cabinet standard prend de 2 à 3 semaines ; une infrastructure clinique complexe nécessite de 4 à 6 semaines.",
+            "Nos solutions sont conçues comme une couche agile (Claims Gateway) qui peut s'ajouter à vos outils existants pour moderniser la communication patient.",
     },
 ]
 

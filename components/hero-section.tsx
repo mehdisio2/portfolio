@@ -17,11 +17,11 @@ export function HeroSection() {
                 </span>
 
                 <h1 className="mb-6 text-5xl lg:text-7xl font-serif font-bold tracking-tight text-foreground leading-tight px-4 max-w-4xl">
-                    Infrastructure Digitale Haute Performance pour la Santé au Maroc.
+                    Infrastructure Digitale & Conformité pour la Santé au Maroc.
                 </h1>
 
                 <p className="mb-10 text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-                    Agence digitale de premier plan aidant les cabinets médicaux et cliniques marocains à optimiser l'accès des patients tout en garantissant une conformité réglementaire absolue.
+                    Préparez votre cabinet pour la feuille de soins électronique (CNSS) et la loi 09-08. Nous fusionnons présence web, automatisation WhatsApp et conformité CNDP dans une solution unique.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 w-full">

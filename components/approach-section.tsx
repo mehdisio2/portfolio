@@ -2,20 +2,20 @@ export function ApproachSection() {
     const steps = [
         {
             phase: "// PHASE_01 : DIAGNOSTIC",
-            headline: "Le Diagnostic Digital",
-            body: "Nous commençons par un audit approfondi de votre concurrence locale et des opportunités SEO. Nous identifions exactement où les revenus vous échappent avant de proposer un périmètre technique.",
+            headline: "Diagnostic Digital & CNDP",
+            body: "Audit de vos processus actuels et mise en conformité avec la loi 09-08 pour la protection des données de santé.",
             output: "[ LIVRABLE: DOCUMENT_STRATEGIE.PDF ]",
         },
         {
             phase: "// PHASE_02 : ARCHITECTURE",
-            headline: "Ingénierie Système",
-            body: "Pas de modèles préconçus. Nous concevons des environnements cliniques sur mesure avec Next.js. La base de données est conçue pour la conformité CNDP et des temps de chargement ultra-rapides.",
+            headline: "Ingénierie de Workflow",
+            body: "Automatisation des tâches administratives : de la prise de contact WhatsApp à la préparation du dossier de remboursement.",
             output: "[ STACK: NEXT.JS / SUPABASE ]",
         },
         {
             phase: "// PHASE_03 : INTÉGRATION",
-            headline: "Déploiement Continu",
-            body: "Lancement sans interruption. Nous gérons la migration de domaine et fournissons un support technique direct pour nous assurer que votre personnel d'accueil est prêt dès le premier jour.",
+            headline: "Support & Évolutivité",
+            body: "Un accompagnement local continu pour adapter votre outil aux futures évolutions du DMP (Dossier Médical Partagé).",
             output: "[ STATUT: EN_PRODUCTION ]",
         },
     ]

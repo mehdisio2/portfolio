@@ -2,28 +2,27 @@ import { Check } from "lucide-react"
 
 const engagementModels = [
     {
-        title: "Re-Architecture des Performances",
+        title: "Modernisation de Cabinet Legacy",
         subtitle: "Rôle : Équipe Agence",
         description:
             "Pour les cabinets freinés par des sites web lents et génériques. Nous auditons et reconstruisons votre présence numérique avec un code haute performance, garantissant un chargement instantané de votre site et le respect de toutes les normes SEO techniques.",
         features: [
-            { name: "Migration vers Next.js", detail: "Temps de chargement inférieur à la seconde" },
-            { name: "Audit SEO Technique & Correctifs", detail: "Schéma/Structure" },
-            { name: "Design d'Interface orienté Mobile", detail: null },
+            { name: "Migration de fichiers Excel vers Cloud Sécurisé", detail: null },
+            { name: "Intégration de passerelles de paiement locales", detail: null },
+            { name: "Archivage numérique conforme", detail: null },
             { name: "Optimisation du Tunnel de Réservation", detail: null },
         ],
         bestFor: "Cabinets Privés / Dentaires / Dermato",
     },
     {
-        title: "Architecture Systèmes",
+        title: "Layer de Conformité \"Turnkey\"",
         subtitle: "Rôle : Partenaires Technologiques",
         description:
             "Pour les cliniques atteignant un plafond opérationnel. Nous concevons et développons une infrastructure logicielle sécurisée sur mesure pour résoudre des blocages spécifiques, allant du triage automatisé des patients au stockage de données conforme aux normes de la CNDP.",
         features: [
-            { name: "Développement d'Applications Web sur mesure", detail: null },
-            { name: "Architecture Base de Données Sécurisée", detail: "Supabase" },
-            { name: "Intégration Vidéo de Télémédecine", detail: null },
-            { name: "Mise en place de Portails Patients", detail: null },
+            { name: "Hébergement local au Maroc", detail: "Certifié" },
+            { name: "Chiffrement des données de santé", detail: null },
+            { name: "Documentation CNDP prête à l'emploi", detail: null },
         ],
         bestFor: "Cliniques en Croissance / Startups en Télésanté",
     },

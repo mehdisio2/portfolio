@@ -6,13 +6,13 @@ export function FooterSection() {
             <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                 {/* CTA Headline */}
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white mb-10 text-balance">
-                    Prêt à mettre à niveau votre infrastructure ?
+                    Prêt à sécuriser et digitaliser votre cabinet ?
                 </h2>
 
                 {/* CTA Button */}
                 <a href="#"
                     className="inline-block bg-white text-slate-900 font-medium px-8 py-4 text-base lg:text-lg transition-all duration-300 hover:bg-slate-100 hover:shadow-lg">
-                    Réserver une Consultation
+                    Demander une Démo Interactive
                 </a>
 
                 {/* Bottom Row */}
