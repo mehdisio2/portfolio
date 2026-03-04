@@ -25,9 +25,14 @@ export function HeroSection() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 w-full">
-                    <button className="h-12 px-8 rounded-md bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors shadow-sm">
+                    <Link
+                        href="https://cal.com/el-mahdi-badilou-qflogf/15min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center h-12 px-8 rounded-md bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors shadow-sm"
+                    >
                         Réserver une Consultation
-                    </button>
+                    </Link>
 
                     <Link
                         href="/work/telemed"

@@ -10,7 +10,9 @@ export function FooterSection() {
                 </h2>
 
                 {/* CTA Button */}
-                <a href="#"
+                <a href="https://cal.com/el-mahdi-badilou-qflogf/15min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block bg-white text-slate-900 font-medium px-8 py-4 text-base lg:text-lg transition-all duration-300 hover:bg-slate-100 hover:shadow-lg">
                     Demander une Démo Interactive
                 </a>

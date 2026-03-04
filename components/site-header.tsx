@@ -33,7 +33,7 @@ export function SiteHeader() {
                 </div>
                 <NavItems items={navItems} variant={isCaseStudy ? "light" : "dark"} />
                 <div className="flex items-center gap-4">
-                    <NavbarButton href="#" variant={isCaseStudy ? "secondary" : "primary"}>
+                    <NavbarButton href="https://cal.com/el-mahdi-badilou-qflogf/15min" target="_blank" rel="noopener noreferrer" variant={isCaseStudy ? "secondary" : "primary"}>
                         Réserver une Consultation
                     </NavbarButton>
                 </div>
@@ -53,7 +53,7 @@ export function SiteHeader() {
                     onClose={() => setIsMobileMenuOpen(false)}
                 >
                     <div className="flex flex-col w-full gap-2 mt-4 px-4">
-                        <NavbarButton href="#" variant="primary" className="w-full">
+                        <NavbarButton href="https://cal.com/el-mahdi-badilou-qflogf/15min" target="_blank" rel="noopener noreferrer" variant="primary" className="w-full">
                             Réserver une Consultation
                         </NavbarButton>
                     </div>
